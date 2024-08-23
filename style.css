@@ -1,9 +1,172 @@
+.dark .card .button {
+    position: absolute;
+    bottom: -13px;
+    right: 20px;
+    padding: 9px 10px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    color: #ff0000;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 2px;
+}
+
+.dark .dropdown-content a {
+  color: rgb(42, 42, 42);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left; /* Выравниваем текст по левому краю */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Добавляем плавные переходы */
+}
+
+.dark {
+    background-color: #1a1625;
+    color: #999;
+}
+
+.dark .logo,
+.dark .nav a,
+.dark .author-works-title,
+.dark .dropdown-btn {
+  color: #999;
+}
+
+.dark .dropdown-btn:hover
+{
+  color: #eee;
+}
+
+.dark .dropdown-content
+{
+  display: none; /* Скрываем по умолчанию */
+  position: absolute;
+  background-color: #3b3b3b;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; /* Помещаем выпадающее меню поверх других элементов */
+}
+
+.dark .card .title,
+.dark .card .content {
+
+    color: #757575 !important; 
+    }
+    
+.dark .special-text {
+    color: #777;
+}
+
+
+.button {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease; 
+            position: relative;
+        }
+
+        .active {
+            background-color: #eee;
+        }
+
+        .system {
+            background-color: #f5f5f5; /* Light grey */
+            color: #333;
+        }
+
+        .dark {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .light {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .nikipatch {
+            background-color: #696969;
+            color: #aeaeae;
+        }
+
+
+        .button:hover { 
+            background-color: #ddd;
+        }
+
+        .button:focus { 
+            outline: none;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        .button i {
+            font-size: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: color 0.3s ease; 
+        }
+
+        /* Стиль для кнопок при активном состоянии */
+        .system.active {
+            background-color: rgb(0, 153, 255); 
+        }
+
+        .system.active i {
+            color: white; 
+        }
+
+        .dark.active {
+            background-color: #333; 
+        }
+
+        
+        .nikipatch .dark.active {
+            background-color: #5b5b5b; 
+        }
+
+        .dark.active i {
+            color: rgb(255, 255, 255); 
+        }
+
+        
+        .nikipatch .dark.active i {
+            color: rgb(121, 121, 121); 
+        }
+
+        .light.active {
+            background-color: white; 
+        }
+
+        .nikipatch .light.active {
+            background-color: rgb(81, 81, 81); 
+        }
+
+        .light.active i {
+            color: yellow; 
+        }
+
+        .nikipatch .light.active i {
+            color: rgb(255, 255, 255); 
+        }
+        
+        
+
+
 body {
   background-color: white;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Убираем скролл по горизонтали */
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  
+  
 }
 
 .modal {
@@ -56,9 +219,24 @@ body {
             margin-bottom: 20px;
         }
 
+
+        .dark .card {
+            width: 300px;
+            background-color: #2e2e2e;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+            margin-bottom: 20px;
+        }
+
+
         .card .title::before {
-            content: "Аватарки";
-            background-color: rgba(0, 38, 126, 0.727); /* Изменили цвет на светло-голубой */
+            content: "Превью ";
+            background-color: rgb(255, 0, 0); /* Изменили цвет на светло-голубой */
             color: white;
             font-size: 14px;
             padding: 2px 8px; /* Сделали отступы меньше */
@@ -69,6 +247,7 @@ body {
             transform: translate(-50%, -50%); /* Центрируем текст */
         }
 
+        
         .card.new .new-label {
             background-color: rgb(255, 0, 0);
             color: white;
@@ -115,7 +294,7 @@ body {
             margin-bottom: 10px;
             text-align: center;
         }
-
+        
         .card .button {
             position: absolute; /* Позиционируем кнопку относительно content */
             bottom: -13px; /* Отступ от нижнего края */
@@ -129,10 +308,32 @@ body {
             margin-bottom: 2px; /* 60px - примерное значение, подберите сами */
           }
 
+
+
+          .dark .card .button {
+            position: absolute; /* Позиционируем кнопку относительно content */
+            bottom: -13px; /* Отступ от нижнего края */
+            right: 20px; /* Отступ от правого края */
+            padding: 9px 10px;
+            background-color: #ffffff; /* Синяя заливка */
+            border-radius: 5px;
+            color: #000000; /* Белый текст */
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out; 
+            margin-bottom: 2px; /* 60px - примерное значение, подберите сами */
+          }
+
         .card .button:hover {
             background-color: #8bc34a; 
             color: #fff; 
         }
+
+        
+        .dark .card .button:hover {
+            background-color: #1d1d1d; 
+            color: #fff; 
+        }
+
 
         .card .description {
             font-size: 1rem;
@@ -213,6 +414,13 @@ h1 {
   cursor: pointer; /* Изменяем курсор на указатель */
 }
 
+
+
+.dark .nav a:hover {
+  color: #ffffff; /* Голубой цвет при наведении */
+  cursor: pointer; /* Изменяем курсор на указатель */
+}
+
 .nav a i { /* Стиль иконок в меню */
   margin-right: 10px;
   font-size: 15px;
@@ -221,6 +429,7 @@ h1 {
 .content {
   margin-bottom: 20px;
 }
+
 
 /* Стиль для выпадающего меню */
 .dropdown {
@@ -267,7 +476,22 @@ h1 {
   color: #fff; /* Белый цвет текста при наведении */
 }
 
+.dark .dropdown-content a:hover {
+  background-color: #2b2b2b; /* Голубой цвет заливки при наведении */
+  color: #fff; /* Белый цвет текста при наведении */
+}
+
+
 .social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0px;
+  font-size: 20px;
+}
+
+
+.dark .social-icons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -282,7 +506,20 @@ h1 {
   transition: color 0.3s ease;
 }
 
+
+.dark .social-icons a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
 .social-icons a:hover {
+  cursor: pointer;
+}
+
+
+.dark .social-icons a:hover {
   cursor: pointer;
 }
 
@@ -290,7 +527,17 @@ h1 {
   color: red;
 }
 
+
+.dark .youtube:hover {
+  color: red;
+}
+
 .telegram:hover {
+  color: #0088cc; /* Голубой */
+}
+
+
+.dark .telegram:hover {
   color: #0088cc; /* Голубой */
 }
 
@@ -298,12 +545,23 @@ h1 {
   color: #005eff; /* Синий */
 }
 
+
+.dark .vk:hover {
+  color: #005eff; /* Синий */
+}
+
 .discord:hover {
   color: #5375f0; /* Фиолетовый */
 }
 
+
+.dark .discord:hover {
+  color: #5375f0; /* Фиолетовый */
+}
+
+
 /* Стиль для ссылки "Авторизация" */
-.nav a:nth-child(4) {
+.nav a:nth-child(0) {
   background-color: #000; /* Черная заливка */
   color: #fff; /* Белый текст */
   padding: 8px 12px; /* Добавляем отступы */
@@ -311,8 +569,8 @@ h1 {
   transition: background-color 0.3s ease; /* Плавный переход цвета */
 }
 
-.nav a:nth-child(4):hover {
-  background-color: #4285f4; /* Голубая заливка при наведении */
+.nav a:nth-child(0):hover {
+  background-color: #26282c; /* Голубая заливка при наведении */
 }
 
 body::-webkit-scrollbar {
