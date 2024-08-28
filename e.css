@@ -645,7 +645,7 @@ background-color: #555; /* Темнее при наведении */
     position: fixed; /* Keep button in place */
     bottom: 20px; /* Position from the bottom */
     right: 20px; /* Position from the right */
-    padding: 27px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #333;
