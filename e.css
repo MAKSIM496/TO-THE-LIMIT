@@ -230,18 +230,35 @@ transition: background-color 0.3s ease, color 0.3s ease;
           margin-bottom: 20px;
       }
 
-
+      :root {
+        --preview-text: "Превью"; 
+      }
+      
       .card .title::before {
-          content: "Превью ";
-          background-color: rgb(255, 0, 0); /* Изменили цвет на светло-голубой */
-          color: white;
-          font-size: 14px;
-          padding: 2px 8px; /* Сделали отступы меньше */
-          border-radius: 15px; /* Сделали закругление меньше */
-          position: absolute; 
-          top: 17%; /* Позиционирование по центру вертикально */
-          left: 50%; /* Позиционирование по центру горизонтально */
-          transform: translate(-50%, -50%); /* Центрируем текст */
+        content: var(--preview-text);
+        background-color: rgb(255, 0, 0);
+        color: white;
+        font-size: 14px;
+        padding: 2px 8px;
+        border-radius: 15px;
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+
+      .dark .card .title::before {
+        content: var(--preview-text);
+        background-color: rgb(204, 0, 255);
+        color: white;
+        font-size: 14px;
+        padding: 2px 8px;
+        border-radius: 15px;
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
       
@@ -401,6 +418,8 @@ transition: background-color 0.3s ease, color 0.3s ease;
     }
 }
 
+
+
 .container {
 max-width: 1300px;
 margin: 0 auto;
@@ -496,7 +515,6 @@ min-width: 160px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1; /* Помещаем выпадающее меню поверх других элементов */
 }
-
 
 .dropdown-content a {
 color: black;
@@ -684,7 +702,3 @@ background-color: #555; /* Темнее при наведении */
 .back-to-top i {
     font-size: 20px;
 }
-
-
-      
-
