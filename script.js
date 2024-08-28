@@ -110,20 +110,22 @@ const buttons = document.querySelectorAll(".button");
             });
         });
 
-        const imageLinks = document.querySelectorAll('.image-link');
-
+   const imageLinks = document.querySelectorAll('.image-link');
         imageLinks.forEach(link => {
           link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault(); // Предотвращаем стандартное поведение ссылки
         
-            // Get the image source from the data attribute
-            const fullImageSrc = this.dataset.imageSrc;
+            // Получаем путь к полному изображению
+            const fullImageSrc = this.querySelector('img').dataset.fullSrc;
         
-            // Find the image element within the link
-            const cardImage = this.querySelector('img');
-        
-            // Update the image source
-            cardImage.src = fullImageSrc;
+            // Проверяем, является ли файл JPG
+            if (fullImageSrc.toLowerCase().endsWith('.jpg') || fullImageSrc.toLowerCase().endsWith('.jpeg')) {
+              // Если да, то открываем изображение в новом окне
+              window.open(fullImageSrc, '_blank'); 
+            } else {
+              // Если нет, то меняем src изображения на полный путь
+              this.querySelector('img').src = fullImageSrc;
+            }
           });
         });
 
