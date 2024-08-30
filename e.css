@@ -1,0 +1,706 @@
+.dark .card .button {
+  position: absolute;
+  bottom: -13px;
+  right: 20px;
+  padding: 9px 10px;
+  background-color: #1f1f1f;
+  border-radius: 5px;
+  color: #ff0000;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 2px;
+}
+
+.dark .dropdown-content a {
+color: rgb(42, 42, 42);
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left; /* Выравниваем текст по левому краю */
+transition: background-color 0.3s ease, color 0.3s ease; /* Добавляем плавные переходы */
+}
+
+.dark {
+  background-color: #1a1625;
+  color: #999;
+}
+
+.dark .logo,
+.dark .nav a,
+.dark .author-works-title,
+.dark .dropdown-btn {
+color: #ba9ffb;
+}
+
+.dark .dropdown-btn:hover
+{
+color: #eee;
+}
+
+.dark .dropdown-content
+{
+display: none; /* Скрываем по умолчанию */
+position: absolute;
+background-color: #1a1625;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1; /* Помещаем выпадающее меню поверх других элементов */
+}
+
+.dark .card .title,
+.dark .card .content {
+
+  color: #ba9ffb !important; 
+  }
+  
+.dark .special-text {
+  color: #ba9ffb;
+}
+
+
+.button {
+          padding: 10px 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #fff;
+          cursor: pointer;
+          margin-left: 10px;
+          transition: background-color 0.3s ease, color 0.3s ease; 
+          position: relative;
+      }
+
+      .active {
+          background-color: #eee;
+      }
+
+      .system {
+          background-color: #f5f5f5; /* Light grey */
+          color: #333;
+      }
+
+      .dark {
+          background-color: #1a1625;
+          color: #ba9ffb;
+      }
+
+      .light {
+          background-color: #fff;
+          color: #333;
+      }
+
+      .nikipatch {
+          background-color: #696969;
+          color: #aeaeae;
+      }
+
+
+      .button:hover { 
+          background-color: #ddd;
+      }
+
+      .button:focus { 
+          outline: none;
+          box-shadow: 0 0 5px #ccc;
+      }
+
+      .button i {
+          font-size: 15px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: color 0.3s ease; 
+      }
+
+      /* Стиль для кнопок при активном состоянии */
+      .system.active {
+          background-color: rgb(0, 153, 255); 
+      }
+
+      .system.active i {
+          color: white; 
+      }
+
+      .dark.active {
+          background-color: #333; 
+      }
+
+      
+      .nikipatch .dark.active {
+          background-color: #5b5b5b; 
+      }
+
+      .dark.active i {
+          color: rgb(255, 255, 255); 
+      }
+
+      
+      .nikipatch .dark.active i {
+          color: rgb(121, 121, 121); 
+      }
+
+      .light.active {
+          background-color: white; 
+      }
+
+      .nikipatch .light.active {
+          background-color: rgb(81, 81, 81); 
+      }
+
+      .light.active i {
+          color: yellow; 
+      }
+
+      .nikipatch .light.active i {
+          color: rgb(255, 255, 255); 
+      }
+      
+body {
+background-color: white;
+font-family: sans-serif;
+margin: 0;
+padding: 0;
+overflow-x: hidden; /* Убираем скролл по горизонтали */
+transition: background-color 0.3s ease, color 0.3s ease; 
+
+
+}
+
+.modal {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Добавляем z-index для приоритета */
+}
+
+      .modal.show { 
+          display: flex; 
+      }
+
+      .modal-content {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+      }
+
+      .modal-content img {
+        max-width: 100%;
+        max-height: 570px; /* Image will not exceed 300px in height */
+        height: auto; 
+    }
+      
+
+      .close-modal {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          font-size: 2rem;
+          color: #333;
+      }
+
+.card {
+          width: 300px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          position: relative;
+          opacity: 0; 
+          transform: translateY(20px); 
+          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+          margin-bottom: 20px;
+      }
+
+
+      .dark .card {
+          width: 300px;
+          background-color: #2f2b3a;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+          overflow: hidden;
+          position: relative;
+          opacity: 0; 
+          transform: translateY(20px); 
+          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+          margin-bottom: 20px;
+      }
+
+      :root {
+        --preview-text: "Превью"; 
+      }
+      
+      .card .title::before {
+        content: var(--preview-text);
+        background-color: rgb(255, 0, 0);
+        color: white;
+        font-size: 14px;
+        padding: 2px 8px;
+        border-radius: 15px;
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+
+      .dark .card .title::before {
+        content: var(--preview-text);
+        background-color: rgb(204, 0, 255);
+        color: white;
+        font-size: 14px;
+        padding: 2px 8px;
+        border-radius: 15px;
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      
+      .card.new .new-label {
+          background-color: rgb(255, 0, 0);
+          color: white;
+          padding: 4px 5px;
+          border-radius: 10px;
+          position: absolute;
+          right: 10px; 
+          display: flex;
+          align-items: center;
+      }
+
+      /* Стили для управления позицией метки */
+      .card.new .new-label.top {
+          top: 40px;
+      }
+
+      .card.new .new-label.bottom {
+          bottom: 320px;
+      }
+
+      .disabled { /* Стиль для недоступного элемента */
+          opacity: 0.5; 
+          pointer-events: none; 
+      }
+      .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+          width: 100%;
+          height: auto;
+          display: block;
+      }
+
+      .card .content {
+          padding: 20px;
+          position: relative; /* Для позиционирования кнопки */
+      }
+
+      .card .title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+          text-align: center;
+      }
+      
+      .card .button {
+          position: absolute; /* Позиционируем кнопку относительно content */
+          bottom: 12px; /* Отступ от нижнего края */
+          right: 9px;
+          padding: 8px 9px;
+          background-color: #ff373e; /* Синяя заливка */
+          color: #fff; /* Белый текст */
+          text-decoration: none;
+          transition: background-color 0.3s ease-in-out; 
+          margin-bottom: 2px; /* 60px - примерное значение, подберите сами */
+          position: fixed
+        }
+
+        .dark .card .button {
+          position: absolute; /* Позиционируем кнопку относительно content */
+          bottom: 12px; /* Отступ от нижнего края */
+          right: 9px; /* Отступ от правого края */
+          padding: 8px 9px;
+          background-color: #974dff; /* Синяя заливка */
+          color: #ffffff; /* Белый текст */
+          text-decoration: none;
+          transition: background-color 0.3s ease-in-out; 
+          margin-bottom: 2px; /* 60px - примерное значение, подберите сами */
+          position: fixed
+        }
+
+      .card .button:hover {
+          background-color: #8bc34a; 
+          color: #fff; 
+      }
+
+      
+      .dark .card .button:hover {
+          background-color :#483b7d; 
+          color: #fff; 
+      }
+
+
+      .card .description {
+          font-size: 1rem;
+          line-height: 1.5;
+          color: #555;
+      }
+
+      .card.show { 
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      .container {
+          display: flex;
+          flex-wrap: wrap; 
+          justify-content: center;
+          margin-top: 20px; 
+      }
+
+      /* Стили для 3 карточек в ряду на ПК */
+@media (min-width: 900px) { 
+    .container .card {
+        width: 30%; 
+        margin-right: 10px; 
+        margin-left: 10px; 
+    }
+
+    .container .card:nth-child(3n) { 
+        margin-right: 0; 
+    }
+}
+
+/* Стили для 1 карточки в ряду на телефонах */
+@media (max-width: 1000px) { 
+    .container .card {
+        width: 90%; 
+        margin-right: 0; 
+        margin-left: 0; 
+    }
+}
+
+/* МЕДИА-ЗАПРОСЫ ДЛЯ ТЕЛЕФОНОВ  */
+
+@media (max-width: 1000px) { 
+    .social-icons a {
+        font-size: 34px; 
+    }
+}
+
+@media (max-width: 1000px) { 
+    .special-text {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 1000px) { 
+    .card .button {
+        font-size: 1.3em;
+        
+    }
+}
+
+@media (max-width: 1000px) {
+    .card .title {
+        font-size: 2.6em; 
+    }
+}
+
+
+
+.container {
+max-width: 1300px;
+margin: 0 auto;
+padding: 20px;
+max-height: 3160px; /* */
+}
+
+h1 {
+text-align: center;
+opacity: 0; /* Начальная прозрачность 0 */
+transform: translateY(-50px); /* Начальное смещение вверх */
+transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавляем плавные переходы */
+}
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+
+}
+
+.logo {
+font-weight: bold;
+font-size: 24px;
+text-decoration: none;
+color: #333; /* Темно-серый цвет ссылок */
+}
+
+.nav {
+display: flex;
+margin-right: -40px;
+}
+
+.nav a {
+display: flex;
+align-items: center;
+margin-left: 20px;
+text-decoration: none;
+color: #333; /* Темно-серый цвет ссылок */
+transition: color 0.3s ease, text-decoration 0.5s ease-in-out; /* Добавляем плавные переходы */
+}
+
+.nav a:hover {
+color: #4285f4; /* Голубой цвет при наведении */
+cursor: pointer; /* Изменяем курсор на указатель */
+}
+
+
+
+.dark .nav a:hover {
+color: #ffffff; /* Голубой цвет при наведении */
+cursor: pointer; /* Изменяем курсор на указатель */
+}
+
+.nav a i { /* Стиль иконок в меню */
+margin-right: 10px;
+font-size: 15px;
+}
+
+.content {
+margin-bottom: 20px;
+}
+
+
+/* Стиль для выпадающего меню */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-btn {
+display: inline-block;
+background-color: transparent;
+border: none;
+font-size: 16px;
+cursor: pointer;
+color: #333; /* Темно-серый цвет ссылок */
+transition: color 0.3s ease, text-decoration 0.5s ease-in-out; /* Добавляем плавные переходы */
+padding: 8px 12px; /* Добавляем отступы */
+border-radius: 5px; /* Скругленные углы */
+}
+
+.dropdown-btn:hover {
+color: #4285f4; /* Голубой цвет текста при наведении */
+}
+
+.dropdown-content {
+display: none; /* Скрываем по умолчанию */
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1; /* Помещаем выпадающее меню поверх других элементов */
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left; /* Выравниваем текст по левому краю */
+transition: background-color 0.3s ease, color 0.3s ease; /* Добавляем плавные переходы */
+}
+
+.dropdown-content a:hover {
+background-color: #4285f4; /* Голубой цвет заливки при наведении */
+color: #fff; /* Белый цвет текста при наведении */
+}
+
+.dark .dropdown-content a:hover {
+background-color: #836dc7; /* Голубой цвет заливки при наведении */
+color: #fff; /* Белый цвет текста при наведении */
+}
+
+
+.social-icons {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-top: 0px;
+font-size: 20px;
+}
+
+
+.dark .social-icons {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-top: 0px;
+font-size: 20px;
+}
+
+.social-icons a {
+margin-left: 10px;
+text-decoration: none;
+color: #333;
+transition: color 0.3s ease;
+}
+
+
+.dark .social-icons a {
+margin-left: 10px;
+text-decoration: none;
+color: #ba9ffb;
+transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+cursor: pointer;
+}
+
+
+.dark .social-icons a:hover {
+cursor: pointer;
+}
+
+.youtube:hover {
+color: red;
+}
+
+
+.dark .youtube:hover {
+color: #33294a;
+}
+
+.telegram:hover {
+color: #0088cc; /* Голубой */
+}
+
+
+.dark .telegram:hover {
+color: #33294a; /* Голубой */
+}
+
+.vk:hover {
+color: #005eff; /* Синий */
+}
+
+
+.dark .vk:hover {
+color: #33294a; /* Синий */
+}
+
+.discord:hover {
+color: #5375f0; /* Фиолетовый */
+}
+
+
+.dark .discord:hover {
+color: #33294a; /* Фиолетовый */
+}
+
+
+/* Стиль для ссылки "Авторизация" */
+.nav a:nth-child(0) {
+background-color: #000; /* Черная заливка */
+color: #fff; /* Белый текст */
+padding: 8px 12px; /* Добавляем отступы */
+border-radius: 5px; /* Скругленные углы */
+transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.nav a:nth-child(0):hover {
+background-color: #26282c; /* Голубая заливка при наведении */
+}
+
+body::-webkit-scrollbar {
+width: 8px; /* Ширина скроллбара */
+}
+
+body::-webkit-scrollbar-track {
+background-color: transparent; /* Прозрачный фон скроллбара */
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: #000; /* Черный цвет ползунка скроллбара */
+border-radius: 10px; /* Скругленные углы ползунка */
+transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.dark::-webkit-scrollbar-thumb {
+    background-color: #ba9ffb; /* Черный цвет ползунка скроллбара */
+    border-radius: 10px; /* Скругленные углы ползунка */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+    }
+
+body::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Темнее при наведении */
+}
+
+.special-text {
+         
+          color: rgba(133, 133, 133, 0.573);
+          border-radius: 10px;
+          text-align: center; /* Добавляем центрирование текста */
+      } 
+
+      
+.back-to-top {
+    position: fixed; /* Keep button in place */
+    bottom: 50px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    padding: 23px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.7; /* Semi-transparent */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    z-index: 100; /* Ensure button stays on top */
+}
+
+.dark .back-to-top {
+    position: fixed; /* Keep button in place */
+    bottom: 50px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    padding: 23px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ba9ffbb2;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.7; /* Semi-transparent */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    z-index: 100; /* Ensure button stays on top */
+}
+
+.back-to-top:hover {
+    opacity: 1; /* Make fully opaque on hover */
+}
+
+/* Show the button when scrolling down */
+.back-to-top.show {
+    display: block; /* Show the button */
+}
+
+/* Icon Styling (Optional) */
+.back-to-top i {
+    font-size: 20px;
+}
+
+.hide-button .button {
+    display: none; /* Hide the button */
+  }
