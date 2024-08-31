@@ -104,7 +104,7 @@ z-index: 1; /* Помещаем выпадающее меню поверх др�
       }
 
       .button i {
-          font-size: 15px;
+          font-size: 20px;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -338,7 +338,7 @@ transition: background-color 0.3s ease, color 0.3s ease;
         }
 
       .card .button:hover {
-          background-color: #8bc34a; 
+          background-color: #c40000; 
           color: #fff; 
       }
 
@@ -651,7 +651,7 @@ background-color: #555; /* Темнее при наведении */
 
 .special-text {
          
-          color: rgba(133, 133, 133, 0.573);
+          color: #2e2e2e92;
           border-radius: 10px;
           text-align: center; /* Добавляем центрирование текста */
       } 
@@ -660,7 +660,7 @@ background-color: #555; /* Темнее при наведении */
 .back-to-top {
     position: fixed; /* Keep button in place */
     bottom: 50px; /* Position from the bottom */
-    right: 20px; /* Position from the right */
+    right: 30px; /* Position from the right */
     padding: 23px;
     border: none;
     border-radius: 5px;
@@ -675,7 +675,7 @@ background-color: #555; /* Темнее при наведении */
 .dark .back-to-top {
     position: fixed; /* Keep button in place */
     bottom: 50px; /* Position from the bottom */
-    right: 20px; /* Position from the right */
+    right: 30px; /* Position from the right */
     padding: 23px;
     border: none;
     border-radius: 5px;
