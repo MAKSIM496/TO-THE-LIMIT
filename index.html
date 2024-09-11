@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Галерея работ</title>
 <link rel="shortcut icon" href="nnamed.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -13,7 +14,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <a href="index.html" class="logo">TO THE LIMIT</a>
+      <a href="index.html" class="logo">Pixel Perfect</a>
       
       <div class="nav">
         <div class="dropdown">
@@ -24,8 +25,8 @@
           </button>
           <div class="dropdown-content">
             <a href="ПРЕВЬЮ.html">Превью</a>
-            <a href="ШАПКИ.html">Шапки</a>
-            <a href="АВАТАРКИ.html">Аватарки</a>
+            <a href="ШАПКИ.html"class="disabled" >Шапки</a>
+            <a href="АВАТАРКИ.html"class="disabled" >Аватарки</a>
             <a href="ОБОИ ДЛЯ ТЕЛЕФОНА.html"class="disabled" >Обои для телефона</a>
             <a href="ЛОГОТИП.html"class="disabled" >Логотип</a>
             <a href="ОБОИ ДЛЯ ПК.html"class="disabled" >Обои на рабочий стол ПК </a>
@@ -45,6 +46,45 @@
         
     </div>
 
+        <!-- Кнопка открытия меню -->
+        <button class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu">
+          <button class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul>
+
+            <button class="button active system" data-theme="system"><i class="fa-solid fa-pen-nib"></i></button>
+            <button class="button dark" data-theme="dark"><i class="fas fa-moon" ></i></button>
+            <button class="button light" data-theme="light"><i class='bx bxs-sun'></i></button>
+            
+            <li><a href="ПРЕВЬЮ.html">Превью</a></li>
+            <li><a href="ШАПКИ.html"class="disabled">Шапки</a></li>
+            <li><a href="АВАТАРКИ.html"class="disabled">Аватарки</a></li>
+            <li><a href="ОБОИ ДЛЯ ТЕЛЕФОНА.html" class="disabled">Обои для телефона</a></li>
+            <li><a href="ЛОГОТИП.html" class="disabled">Логотип</a></li>
+            <li><a href="ОБОИ ДЛЯ ПК.html" class="disabled">Обои на рабочий стол ПК</a></li>
+            <li><a href="ОБЛОЖКИ ДЛЯ ТРЕКА.html" class="disabled">Обложка для трека</a></li>
+            <li><a href="ОФОРМЛЕНИЕ ДЛЯ VK.html" class="disabled">Комплект оформления для VK</a></li>
+            <li><a href="ОФОРМЛЕНИЕ ДЛЯ YOUTUBE.html" class="disabled">Комплект оформления для YouTude</a></li>
+
+
+            <div class="social-icons">
+              <a href="https://www.youtube.com/@MD26964" class="youtube"><i class="fab fa-youtube"></i></a>
+              <a href="https://t.me/maksimRje" class="telegram"><i class="fab fa-telegram"></i></a>
+              <a href="https://vk.com/voronmaks" class="vk"><i class="fab fa-vk"></i></a>
+              <a href="#" class="discord"><i class="fab fa-discord"></i></a>
+            </div>
+          </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
       </div>
     </div>
 
@@ -61,6 +101,17 @@
       <p class="special-text">&copy 2024 TO THE LIMIT все права защищены. </p>
       <div class="container">
 
+
+
+        <div class="card first-page"> 
+          <a href="#" class="image-link" data-image-src="ПРЕВЬЮ/Патчу (1).webp"> 
+              <img src="ПРЕВЬЮ/Патчу (1).webp"alt="Картинка 2">  
+          </a>
+          <div class="content">
+              <h2 class="title">WARFACE CLUTCH: Восход в одиночку без смертей</h2>
+              <a href="https://www.donationalerts.com/r/maksim_v" class="button">Купить</a>
+          </div>
+        </div>        
 
         
 <div class="card first-page"> 
@@ -310,7 +361,30 @@
   </div>
 </div>
 
+<div class="card first-page"> 
+  <a href="#" class="image-link" data-image-src="imd/i.webp"> 
+      <img src="imd/i.webp"alt="Картинка 2">  
+  </a>
+  <div class="content">
+      <h2 class="title">СКОРО НОВОЕ ПРЕВЬЮ</h2>
+      <a href="https://www.donationalerts.com/r/maksim_v" class="button">Купить</a>
+  </div>
+</div>
+
+<div class="card first-page"> 
+  <a href="#" class="image-link" data-image-src="imd/i.webp"> 
+      <img src="imd/i.webp"alt="Картинка 2">  
+  </a>
+  <div class="content">
+      <h2 class="title">СКОРО НОВОЕ ПРЕВЬЮ</h2>
+      <a href="https://www.donationalerts.com/r/maksim_v" class="button">Купить</a>
+  </div>
+</div>
+
+
+
       <div class="social-icons">
+        <p class="social-title">Напиши мне если есть вопросы</p> 
         <a href="https://www.youtube.com/@MD26964" class="youtube"><i class="fab fa-youtube"></i></a>
         <a href="https://t.me/maksimRje" class="telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://vk.com/voronmaks" class="vk"><i class="fab fa-vk"></i></a>
@@ -319,7 +393,7 @@
     </div>
 
     <button id="backToTopBtn" class="back-to-top" title="нажми если устал крутить сам">
-      <i class="fas fa-arrow-up"></i> 
+      <i class="fa-solid fa-circle-arrow-up"></i> 
   </button>
     
     <script src="script.js"></script>
