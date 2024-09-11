@@ -142,3 +142,30 @@ const firstPageCards = document.querySelectorAll('.first-page');
 firstPageCards.forEach(card => {
   card.classList.add('hide-button');
 });   
+
+// Loop through each card that has the 'first-page' class
+firstPageCards.forEach(card => {
+    card.classList.add('hide-button');
+  });   
+  
+    // Добавляем слушатель событий для кнопки открытия меню
+    const menuBtn = document.querySelector('.menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+  
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+  
+    // Добавляем слушатель событий для кнопки закрытия меню
+    const closeBtn = document.querySelector('.close-btn');
+  
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  
+    // Добавляем слушатель событий для закрытия меню за пределами
+    document.addEventListener('click', (event) => {
+      if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+        mobileMenu.classList.remove('active');
+      }
+    }); 
